@@ -1,0 +1,49 @@
+name: MLOps CI Pipeline
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  build-test-train:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest -q
+
+    - name: Train model
+      run: |
+        python -m src.train --data data/churn_sample.csv --model-out model/model.joblib
+
+    - name: Upload trained model artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: churn-model
+        path: model/model.joblib
+
+    - name: Upload metrics
+      run: |
+        python -m src.evaluate
+      continue-on-error: true
+
+    - name: Upload metrics artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: evaluation-metrics
+        path: model/metrics.json
